@@ -14,7 +14,6 @@
                     {
                         Console.WriteLine("Enter 'add' to add a new employee or press Enter to exit:");
 
-
                         string? command = Console.ReadLine();
 
                         if (string.IsNullOrEmpty(command))
