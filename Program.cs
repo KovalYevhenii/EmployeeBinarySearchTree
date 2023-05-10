@@ -14,7 +14,6 @@
                     {
                         Console.WriteLine("Enter 'add' to add a new employee or press Enter to exit:");
 
-
                         string? command = Console.ReadLine();
 
                         if (string.IsNullOrEmpty(command))
@@ -56,12 +55,6 @@
                                     Console.WriteLine("Invalid input");
                                     continue;
                             }
-                            if (choise == 0)
-                            {
-                               
-                            }
-                            else if (choise == 1) continue;
-                            else if (choise == 2) Environment.Exit(0);
                         }
                         catch (FormatException)
                         {
