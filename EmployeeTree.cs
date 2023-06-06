@@ -96,7 +96,9 @@ namespace BinarySearchTree
         public void Traverse(EmployeeNode? node)
         {
             if (node == null)
+            {
                 return;
+            }
             Traverse(node.Left);
             Console.WriteLine($"{node.Name}: {node.Salary}");
             Traverse(node.Right);
