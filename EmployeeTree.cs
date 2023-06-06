@@ -9,7 +9,9 @@ namespace BinarySearchTree
         {
             string name = AddName();
             double salary = AddSalary();
+
             var node = new EmployeeNode { Salary = salary, Name = name };
+
             if (Root == null)
             {
                 Root = node;
@@ -26,17 +28,21 @@ namespace BinarySearchTree
                 name = Console.ReadLine();
             }
             while (!Regex.IsMatch(name, @"^[a-zA-Z ]+$"));
+            
             return name;
         }
         private static double AddSalary()
         {
             double salary;
             bool isValidSalary;
+
             do
             {
                 Console.WriteLine("Enter employee salary: ");
+
                 string? input = Console.ReadLine();
                 isValidSalary = double.TryParse(input, out salary);
+
                 if (!isValidSalary)
                 {
                     Console.WriteLine("Invalid input. Please enter a valid salary");
@@ -45,7 +51,10 @@ namespace BinarySearchTree
                 {
                     Console.WriteLine("Salary can not be negative");
                 }
-            } while (!isValidSalary); return salary;
+            } 
+            while (!isValidSalary);
+            
+            return salary;
         }
         private void AddNode(EmployeeNode parent, EmployeeNode nodeToAdd)
         {
